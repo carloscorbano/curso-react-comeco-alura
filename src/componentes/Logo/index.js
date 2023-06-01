@@ -1,14 +1,26 @@
 import logo from './../../imagens/logo.svg';
-import './estilo.css';
+import styled from 'styled-components';
+
+const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    gap: 10px;
+    margin: 0;
+`;
+
+const LogoImg = styled.img`
+    margin-left: 2vh;
+`;
 
 function Logo() {
     return (
-        <div className='logo'>
-            <img src={logo} 
-                alt='Logo Alura Books' 
-                className='logo__img'></img>
-            <p className='logo__texto'><strong>Alura</strong>Books</p>
-        </div>
+        <LogoContainer>
+            <LogoImg 
+                src={logo} 
+                alt='Logo Alura Books' />
+            <p><strong>Alura</strong>Books</p>
+        </LogoContainer>
     );
 }
 

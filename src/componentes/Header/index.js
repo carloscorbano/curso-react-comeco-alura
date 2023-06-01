@@ -1,15 +1,21 @@
+import styled from 'styled-components';
 import Logo from '../Logo';
 import OpcoesHeader from '../OpcoesHeader';
-import IconesHeader from '../OpcoesIcones';
-import './estilo.css';
+import IconesHeader from '../IconesHeader';
+
+const HeaderContainer = styled.header`
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+`;
 
 function Header() {
     return (
-        <header className='header'>
+        <HeaderContainer>
             <Logo />
             <OpcoesHeader />
             <IconesHeader />
-        </header>
+        </HeaderContainer>
     );
 }
 
