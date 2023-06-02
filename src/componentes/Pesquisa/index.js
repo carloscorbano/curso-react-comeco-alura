@@ -24,6 +24,8 @@ const Subtitulo = styled.h3`
 `;
 
 const ResultadoContainer = styled.section`
+    width: 100%;
+    
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     grid-gap: 20px;

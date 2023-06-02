@@ -1,6 +1,7 @@
 import Header from './componentes/Header';
 import Pesquisa from './componentes/Pesquisa'
 import styled from 'styled-components';
+import React, { useEffect } from 'react';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -9,6 +10,7 @@ const AppContainer = styled.div`
 `;
 
 function App() {
+  useEffect(() => { document.title = 'AluraBooks'; }, []);
   return (
     <AppContainer>
       <Header />
