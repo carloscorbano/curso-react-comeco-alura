@@ -4,7 +4,10 @@ import { useState } from "react";
 import { livros } from "./dadosPesquisa";
 
 const PesquisaContainer = styled.section`
-    background-image: linear-gradiend(90deg, #002F52 35%, #326589 165%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(90deg, #002F52 35%, #326589 160%);
     color: #FFF;
     text-align: center;
     padding: 85px 0;
@@ -24,15 +27,11 @@ const Subtitulo = styled.h3`
 `;
 
 const ResultadoContainer = styled.section`
-    width: 100%;
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-gap: 20px;
-    padding: 50px;
-    background-image: linear-gradient(90deg, #002F52 35%, #326589 160%);
-    align-content: space-between;
-    justify-content: space-around;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-evenly;
+margin: 10vh 10vw;
 `;
 
 const CartaoContainer = styled.div`
@@ -42,6 +41,8 @@ const CartaoContainer = styled.div`
     border-radius: 2%;
     box-shadow: 2px 2px 5px #002F52;
     cursor: pointer;
+    background: #002F52;
+    margin-top: 10px;
 
 &:hover {
     background: #326589;

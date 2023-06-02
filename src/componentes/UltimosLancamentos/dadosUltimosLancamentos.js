@@ -7,11 +7,7 @@ import livroGuiaFrontEnd from '../../imagens/Guia-front-end.png';
 import livroORetornoDoCangaceiro from '../../imagens/O-Retorno-do-cangaceiro-JavaScript.png';
 
 export const livros = [
-    { nome: 'Acessibilidade na Web', id: 1, src: livroAW},
-    { nome: 'Angular Firebase', id: 2, src: livroAngularFirebase },
-    { nome: 'Bootstrap 4', id: 3, src: livroBootstrap },
-    { nome: 'Cangaceiro Javascript', id: 4, src: livroCangaceiro },
     { nome: 'CSS Eficiente', id: 5, src: livroCSS },
     { nome: 'Guia Front End', id: 6, src: livroGuiaFrontEnd },
     { nome: 'O Retorno do Cangaceiro Javascript', id: 7, src: livroORetornoDoCangaceiro }
-];
+]
