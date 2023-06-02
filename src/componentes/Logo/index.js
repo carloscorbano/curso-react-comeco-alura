@@ -7,6 +7,7 @@ const LogoContainer = styled.div`
     font-size: 2rem;
     gap: 10px;
     margin: 0;
+    cursor: pointer;
 `;
 
 const LogoImg = styled.img`
