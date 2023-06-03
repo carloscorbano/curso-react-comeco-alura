@@ -1,7 +1,8 @@
 # Curso Alura - React #
 
+<center>
 ![Logo](https://github.com/MonicaHillman/aluraplay-requisicoes/raw/main/img/logo.png)
-
+</center>
 Criando uma aplicação utilizando Javascript e React.
 
 ## Tecnologias utilizadas durante o curso ##
