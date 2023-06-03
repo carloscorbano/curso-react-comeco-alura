@@ -1,5 +1,8 @@
 import { livros } from './dadosUltimosLancamentos';
+import { Titulo } from '../Titulo';
+import CardRecomenda from '../CardRecomenda';
 import styled from 'styled-components';
+import livroAngularImg from "../../imagens/Angular-11-e-Firebase.png"
 
 const UltimosLancamentosContainer = styled.section`
     display: flex;
@@ -11,28 +14,25 @@ const UltimosLancamentosContainer = styled.section`
     box-shadow: 0px -1px 5px #000000;
 `;
 
-const Titulo = styled.h2`
-    width: 100%;
-    text-align: center;
-    color: #ffa000;
-    font-size: 2rem;
-`;
-
 const CapasContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 const CapaImg = styled.img`
-width: 15vw;
-margin: 15px;
-cursor: pointer;
+    max-width: fit-content(10em);
+    margin: 15px;
+    cursor: pointer;
 `;
 
 function UltimosLancamentos() {
     return (
         <UltimosLancamentosContainer>
-            <Titulo>ÚLTIMOS LANÇAMENTOS</Titulo>
+            <Titulo 
+                cor="#EB9B00" 
+                tamanhoFonte="2rem">
+                    ÚLTIMOS LANÇAMENTOS
+            </Titulo>
             <CapasContainer>
                 {
                     livros.map( livro => (
@@ -40,6 +40,12 @@ function UltimosLancamentos() {
                     ))
                 }
             </CapasContainer>
+            <CardRecomenda 
+                titulo="Talvez você se interesse por..."
+                subtitulo="Angular 11"
+                descricao="Construindo uma aplicação com a plataforma Google"
+                img={livroAngularImg}
+            />
         </UltimosLancamentosContainer>
     );
 }

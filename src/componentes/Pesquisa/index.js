@@ -10,8 +10,8 @@ const PesquisaContainer = styled.section`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 160%);
     color: #FFF;
     text-align: center;
-    padding: 85px 0;
-    height: 270px;
+    margin-top: 10vh;
+    height: 100%;
     width: 100%;
 `;
 
@@ -26,12 +26,13 @@ const Subtitulo = styled.h3`
     margin-bottom: 40px;
 `;
 
-const ResultadoContainer = styled.section`
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: space-evenly;
-margin: 10vh 10vw;
+const ResultadoContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 10vh 10vw;
 `;
 
 const CartaoContainer = styled.div`
