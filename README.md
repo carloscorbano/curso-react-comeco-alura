@@ -1,7 +1,7 @@
 # Curso Alura - React #
 
 <center>
-![Logo](https://github.com/MonicaHillman/aluraplay-requisicoes/raw/main/img/logo.png)
+<img src="https://github.com/MonicaHillman/aluraplay-requisicoes/raw/main/img/logo.png" alt="Logo Alura" width="80" height="80" />
 </center>
 Criando uma aplicação utilizando Javascript e React.
 
