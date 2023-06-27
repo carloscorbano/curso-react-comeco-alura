@@ -16,3 +16,7 @@ Criando uma aplicação utilizando Javascript e React.
 ## Tecnologias utilizadas no projeto ##
 * HTML
 * CSS
+
+## Aviso ##
+
+Este projeto é um submodulo (front-end) do projeto [Consumindo a API](https://github.com/carloscorbano/react-node-consumindo-api-alura)
