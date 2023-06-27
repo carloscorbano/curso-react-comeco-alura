@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Input from "../Input";
-import { useState } from "react";
-import { livros } from "./dadosPesquisa";
+import { useEffect, useState } from "react";
+import { getLivros } from "./../../servicos/livros";
 
 const PesquisaContainer = styled.section`
     display: flex;
@@ -10,7 +10,6 @@ const PesquisaContainer = styled.section`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 160%);
     color: #FFF;
     text-align: center;
-    margin-top: 10vh;
     height: 100%;
     width: 100%;
 `;
@@ -57,6 +56,12 @@ text-shadow: 1px 1px #002F52;
 
 function Pesquisa() {
     const [livrosPesquisados, setLivrosPesquisados] = useState([]);
+    const [livros, setLivros] = useState([]);
+
+    useEffect(() => {
+        const livrosDaAPI = getLivros();
+        setLivros(livrosDaAPI);
+    }, []);
 
     return (
         <PesquisaContainer>
