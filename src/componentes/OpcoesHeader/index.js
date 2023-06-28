@@ -16,13 +16,22 @@ const Opcao = styled.li`
   min-width: 120px;
 `;
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    weight: 600;
+
+    &:visited, &:link, &:hover, &:active {
+      color: #000;
+    }
+`;
+
 const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'ESTANTE'];
 
 function OpcoesHeader() {
     return (
         <ListaOpcoes>
           { textoOpcoes.map( (texto) => (
-            <Link to={`/${texto.toLowerCase()}`}><Opcao><p>{texto}</p></Opcao></Link>
+            <StyledLink to={`/${texto.toLowerCase()}`}><Opcao><p>{texto}</p></Opcao></StyledLink>
           )) }
        </ListaOpcoes>
     );

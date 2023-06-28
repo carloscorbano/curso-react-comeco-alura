@@ -69,8 +69,19 @@ function Pesquisa() {
     }
 
     async function insertFavorito(id) {
-        await postFavorito(id);
-        alert(`Livro de id: ${id} inserido!`);
+        try {
+            await postFavorito(id);
+            alert(`Livro de id: ${id} inserido!`);
+        } catch(error) {
+            switch(error.response.status) {
+                case 304:
+                    alert(`Livro ${id} não foi inserido nos favoritos pois já contêm esse livro.`);
+                    break;
+                default:
+                    break;
+            }
+
+        }
     }
 
     return (
@@ -92,7 +103,7 @@ function Pesquisa() {
                 {
                     livrosPesquisados.map(livro => (
                         <CartaoContainer onClick={() => insertFavorito(livro.id)} >
-                            <img src={livro.src} alt='capa livro' />
+                            <img src={`./imagens/${livro.img}`} alt={`Capa do livro ${livro.nome}`} />
                             <CartaoTitulo>{livro.nome}</CartaoTitulo>
                         </CartaoContainer>
                     ) )

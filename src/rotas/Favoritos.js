@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { deleteFavorito, getFavoritos } from '../servicos/favoritos';
-import livroImg from '../imagens/Cangaceiro-Javascript.png'
 
 const AppContainer = styled.div`
   width: 100%;
@@ -21,10 +20,11 @@ const Resultado = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 5px 0;
     cursor: pointer;
     text-align: center;
-    padding: 0 100px;
+    padding: 10px 100px;
+
     p {
         width: 200px;
         color: #FFF;
@@ -42,6 +42,8 @@ const Titulo = styled.h2`
     font-size: 36px;
     text-align: center;
     width: 100%;
+    margin: 0;
+    padding: 50px 0;
 `
 
 function Favoritos() {
@@ -72,7 +74,7 @@ function Favoritos() {
            favoritos.length !== 0 ? favoritos.map(favorito => (
              <Resultado onClick={() => deletarFavorito(favorito.id)}>
                <p>{favorito.nome}</p>
-               <img src={livroImg} alt="Capa livro"/>
+               <img src={`./imagens/${favorito.img}`} alt="Capa livro"/>
              </Resultado>
            )) : null
          }

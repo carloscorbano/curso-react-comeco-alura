@@ -12,12 +12,22 @@ const HeaderContainer = styled.header`
     width: 100%;
 `;
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    
+    &:visited {
+        color: #000;
+        weight: 400;
+    }
+`;
+
+
 function Header() {
     return (
         <HeaderContainer>
-            <Link to="/">
+            <StyledLink to="/">
                 <Logo />
-            </Link>
+            </StyledLink>
             <OpcoesHeader />
             <IconesHeader />
         </HeaderContainer>
